@@ -4,12 +4,16 @@ public void setup(){
 	// rectMode(CENTER);
 }
 public void draw(){
-	fractal(300,250,500);
+	fill(255,0,100);
+	fractal(500,500,600);
 }
 public void fractal(int x, int y, int len){
-	rect(x,y,len,len/2);
-	if(len >40){
+
+	circle(x,y,len/2);
+	if(len >20){
 		fractal(x+len/2,y,len/2);
 		fractal(x-len/2,y,len/2);
+		fractal(x+len/2,y+len/2,len/2);
+		fractal(x-len/2,y-len/2,len/2);
 	}
 }
