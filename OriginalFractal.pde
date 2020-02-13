@@ -9,7 +9,7 @@ public void draw(){
 }
 public void fractal(int x, int y, int len){
 
-	circle(x,y,len/2);
+	ellipse(x, y, len/2, len/2);
 	if(len >20){
 		fractal(x+len/2,y,len/2);
 		fractal(x-len/2,y,len/2);
